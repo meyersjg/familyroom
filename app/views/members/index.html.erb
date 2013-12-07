@@ -1,0 +1,26 @@
+<h1>Members</h1>
+
+<p><%= link_to 'Add a New Member', new_member_url %></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @members.each do |member| %>
+    <tr>
+      <td><%= member.first_name %></td>
+      <td><%= link_to 'Show', member_url(member) %></td>
+      <td><%= link_to 'Edit', edit_member_url(member) %></td>
+      <td><%= link_to 'Destroy', member_url(member), method: 'delete', data: { confirm: "Do you really want to delete this member?" } %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+

@@ -1,0 +1,22 @@
+<h1>New Message</h1>
+
+<%= form_tag(messages_url, method: 'post') do %>
+
+  <%= hidden_field_tag :member_id, current_member.id %>
+
+  <%= hidden_field_tag :family_id, current_member.family.id %>
+
+  <div>
+    <%= label_tag :title %><br />
+    <%= text_field_tag :title %>
+  </div>
+
+  <div>
+    <%= label_tag :body %><br />
+    <%= text_area_tag :body %>
+  </div>
+
+  <div>
+    <%= submit_tag "Create Message" %>
+  </div>
+<% end %>

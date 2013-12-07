@@ -1,0 +1,12 @@
+<h1>New Family</h1>
+
+<%= form_tag(families_url, method: 'post') do %>
+  <div>
+    <%= label_tag :name %><br />
+    <%= text_field_tag :name %>
+  </div>
+
+  <div>
+    <%= submit_tag "Create Room" %>
+  </div>
+<% end %>

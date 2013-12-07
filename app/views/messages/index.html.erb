@@ -1,0 +1,28 @@
+<h1>Messages</h1>
+
+<p><%= link_to 'Add a New Message', new_message_url %></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @messages.each do |message| %>
+
+      <td><%= message.title %></td>
+      <td><%= message.body %></td>
+
+      <td><%= link_to 'Edit', edit_message_url(message) %></td>
+      <td><%= link_to 'Destroy', message_url(message), method: 'delete', data: { confirm: "Do you really want to delete this message?" } %></td>
+
+    </tr>
+  <% end %>
+  </tbody>
+</table>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FamilyRoom</title>
+  <link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css">
+  <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
+  <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.1/js/bootstrap.min.js"></script>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <div class="container">
+    <div class="nav">
+      <header>
+       <h1 class="title"><%= link_to "FamilyRoom", root_url %></h1>
+        <div class="login">
+          <%= link_to "Sign Up!", new_member_url %> |
+          <%= link_to "Sign In", '/login' %> |
+          <%= link_to "Sign Out", '/logout' %>
+        </div>
+      </header>
+    </div>
+
+  <% if current_member && current_member.family_id %>
+    <h3 class="current_member">Hello, <%= link_to current_member.first_name, family_url(id: current_member.family_id) %>!</h3>
+  <% end %>
+
+<!--     <div class="greeting">
+      <%# if session[:member_id] %>
+        <h3>Hello, <%#= Member.find_by(id: session[:member_id]).first_name %></h3>
+      <%# end %>
+    </div> -->
+    <%= yield %>
+  <!-- </div> -->
+
+<div class="clearfooter"></div>
+
+  <div class="container1">
+
+    <hr class="featurette-divider">
+
+    <footer>
+      <p class="pull-right"></p>
+      <p>&copy; FamilyRoom, Inc. &middot; <a href= "/about">About</a></a></p>
+    </footer>
+
+  </div>
+
+</body>
+</html>

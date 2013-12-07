@@ -1,0 +1,12 @@
+<h1>Editing Family #<%= @family.id %></h1>
+
+<%= form_tag(family_url(@family), method: 'patch') do %>
+  <div>
+    <%= label_tag :name %><br />
+    <%= text_field_tag :name, @family.name %>
+  </div>
+
+  <div>
+    <%= submit_tag "Update Family" %>
+  </div>
+<% end %>

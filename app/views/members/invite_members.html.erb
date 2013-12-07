@@ -1,0 +1,18 @@
+<h1>Invite Your Family Members!</h1>
+
+<%= form_tag create_invite_members_path(@member) do %>
+
+<%= hidden_field_tag :family_id, current_member.family_id %>
+
+ <p>
+   <b>Family Member's First Name:</b><br>
+   <%= text_field_tag :first_name %>
+ </p>
+
+ <p>
+   <b>Family Member's email:</b><br>
+   <%= text_field_tag :email %>
+ </p>
+
+   <%= submit_tag "Invite Family Members!" %>
+<% end %>
