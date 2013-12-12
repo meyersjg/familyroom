@@ -8,39 +8,38 @@
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
+
 <body>
+
 <div class="wrap">
   <div class="container">
-    <!-- <div class="nav"> -->
-      <header>
-       <h1 class="title"><%= link_to "FamilyRoom", root_url %></h1>
-        <div class="login">
-          <% if session[:member_id].present? %>
-            <%= link_to "Sign Out", logout_url %>
-            <% else %>
-            <%= link_to "Sign In", '#login', :class => "fancybox" %>
-          <% end %>
-        </div>
-
-      <div id="login" style="display:none">
-          <h1>Sign In</h1>
-
-        <%= form_tag sessions_url do %>
-
-          <%= label_tag :email, "Email:" %>
-          <%= text_field_tag :email, params[:email], size: 20 %>
-          <br>
-          <%= label_tag :password, "Password:" %>
-          <%= password_field_tag :password %>
-          <br>
-          <%= submit_tag "Enter" %>
-
+    <header>
+     <h1 class="title"><%= link_to "FamilyRoom", root_url %></h1>
+      <div class="login">
+        <% if session[:member_id].present? %>
+          <%= link_to "Sign Out", logout_url %>
+          <% else %>
+          <%= link_to "Sign In", '#login', :class => "fancybox" %>
         <% end %>
-
       </div>
 
+      <div id="login" style="display:none">
+        <h1>Sign In</h1>
 
-      </header>
+          <%= form_tag sessions_url do %>
+
+            <%= label_tag :email, "Email:" %>
+            <%= text_field_tag :email, params[:email], size: 20 %>
+            <br>
+            <%= label_tag :password, "Password:" %>
+            <%= password_field_tag :password %>
+            <br>
+            <%= submit_tag "Enter" %>
+
+          <% end %>
+
+      </div>
+    </header>
 
     <% if current_member && current_member.family_id %>
       <h3 class="current_member">Hello, <%= link_to current_member.first_name, family_url(id: current_member.family_id) %>!</h3>
