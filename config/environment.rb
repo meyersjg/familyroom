@@ -12,6 +12,7 @@ ActionMailer::Base.smtp_settings = {
   password: CREDENTIALS["password"],
   address: 'smtp.gmail.com',
   port: 587,
+  domain: 'heroku.com',
   authentication: 'plain',
   enable_starttls_auto: true
    }
