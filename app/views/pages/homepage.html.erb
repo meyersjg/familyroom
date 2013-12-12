@@ -1,3 +1,5 @@
+<div class="jumbotron">
+
 <h1>
   Welcome To FamilyRoom.
 </h1>
@@ -10,5 +12,39 @@
 <br>
 
 <p>
-  <%= link_to "Create A FamilyRoom!", new_member_url, class: "create_room"%>
-</p>
+  <%= link_to "Create A FamilyRoom!", '#new_member_url', class: "fancybox btn btn-primary btn-lg"%>
+
+  <div id="new_member_url" style="display:none">
+    <h3>Create Account</h3>
+      <%= form_for Member.new do |f| %>
+
+      <%= f.hidden_field :family_id, :value => params[:family_id] if params[:family_id].present? %>
+
+      <div>
+        <%= f.label :first_name %><br>
+        <%= f.text_field :first_name %>
+      </div>
+
+      <div>
+        <%= f.label :email %><br>
+        <%= f.text_field :email %>
+      </div>
+
+      <div>
+        <%= f.label :password %><br>
+        <%= f.password_field :password %>
+      </div>
+
+      <div>
+        <%= f.label :password_confirmation %><br>
+        <%= f.password_field :password_confirmation %>
+      </div>
+
+      <div>
+        <%= f.submit %>
+      </div>
+    <% end %>
+    </div>
+    </p>
+
+</div>

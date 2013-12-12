@@ -20,9 +20,9 @@ class SessionsController < ApplicationController
         flash.now[:notice] = "Please try again."
         render 'new'
       end
-    else
-      flash.now[:notice] = "Please try again."
-      render 'new'
+      else
+        flash.now[:notice] = "Please try again."
+        render 'new'
+      end
     end
   end
-end

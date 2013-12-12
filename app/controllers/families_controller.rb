@@ -19,7 +19,7 @@ class FamiliesController < ApplicationController
     current_member.family_id = @family.id
     current_member.save
 
-    redirect_to invite_members_url
+    redirect_to family_url
   end
 
   def edit

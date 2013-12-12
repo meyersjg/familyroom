@@ -1,6 +1,7 @@
 ruby '2.0.0'
 source 'https://rubygems.org'
 
+gem 'fancybox2-rails', '~>0.2.4'
 
 gem 'starter_generators'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

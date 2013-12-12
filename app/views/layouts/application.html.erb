@@ -2,8 +2,7 @@
 <html>
 <head>
   <title>FamilyRoom</title>
-  <link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css">
-  <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="http://bootswatch.com/yeti/bootstrap.min.css">
   <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.1/js/bootstrap.min.js"></script>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
@@ -12,41 +11,61 @@
 <body>
 
   <div class="container">
-    <div class="nav">
+    <!-- <div class="nav"> -->
       <header>
        <h1 class="title"><%= link_to "FamilyRoom", root_url %></h1>
         <div class="login">
-          <%= link_to "Sign Up!", new_member_url %> |
-          <%= link_to "Sign In", '/login' %> |
-          <%= link_to "Sign Out", '/logout' %>
+          <% if session[:member_id].present? %>
+            <%= link_to "Sign Out", logout_url %>
+            <% else %>
+            <%= link_to "Sign In", '#login', :class => "fancybox" %>
+          <% end %>
         </div>
+
+      <div id="login" style="display:none">
+          <h1>Sign In</h1>
+
+        <%= form_tag sessions_url do %>
+
+          <%= label_tag :email, "Email:" %>
+          <%= text_field_tag :email, params[:email], size: 50 %>
+          <br>
+          <%= label_tag :password, "Password:" %>
+          <%= password_field_tag :password %>
+          <br>
+          <%= submit_tag "Enter" %>
+
+        <% end %>
+
+      </div>
+
+
       </header>
-    </div>
 
-  <% if current_member && current_member.family_id %>
-    <h3 class="current_member">Hello, <%= link_to current_member.first_name, family_url(id: current_member.family_id) %>!</h3>
-  <% end %>
+    <% if current_member && current_member.family_id %>
+      <h3 class="current_member">Hello, <%= link_to current_member.first_name, family_url(id: current_member.family_id) %>!</h3>
+    <% end %>
 
-<!--     <div class="greeting">
-      <%# if session[:member_id] %>
-        <h3>Hello, <%#= Member.find_by(id: session[:member_id]).first_name %></h3>
-      <%# end %>
-    </div> -->
+
+  </div>
+
+
+  <div class="container">
     <%= yield %>
-  <!-- </div> -->
+  </div>
 
 <div class="clearfooter"></div>
 
-  <div class="container1">
+  <div class="container">
 
     <hr class="featurette-divider">
 
     <footer>
       <p class="pull-right"></p>
-      <p>&copy; FamilyRoom, Inc. &middot; <a href= "/about">About</a></a></p>
+      <p>&copy; JGM, Inc. &middot; <a href= "/about">About</a></a></p>
     </footer>
 
-  </div>
 
+</div>
 </body>
 </html>
