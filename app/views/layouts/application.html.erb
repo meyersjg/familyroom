@@ -9,7 +9,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<div class="wrap">
   <div class="container">
     <!-- <div class="nav"> -->
       <header>
@@ -28,7 +28,7 @@
         <%= form_tag sessions_url do %>
 
           <%= label_tag :email, "Email:" %>
-          <%= text_field_tag :email, params[:email], size: 50 %>
+          <%= text_field_tag :email, params[:email], size: 20 %>
           <br>
           <%= label_tag :password, "Password:" %>
           <%= password_field_tag :password %>
@@ -53,19 +53,15 @@
   <div class="container">
     <%= yield %>
   </div>
-
-<div class="clearfooter"></div>
-
-  <div class="container">
-
-    <hr class="featurette-divider">
+</div>
 
     <footer>
-      <p class="pull-right"></p>
-      <p>&copy; JGM, Inc. &middot; <a href= "/about">About</a></a></p>
+      <div class="container">
+        <hr class="featurette-divider">
+        <p class="pull-right"></p>
+        <p>&copy; JGM, Inc. &middot; <a href= "/about">About</a></a></p>
+      </div>
     </footer>
 
-
-</div>
 </body>
 </html>

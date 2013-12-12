@@ -15,7 +15,7 @@
 
 a:hover {
   text-decoration: none;
-  color: #01ff03
+  color: #17d6ac;
 }
 
 .navbar {
@@ -49,16 +49,15 @@ html, body {
 height: 100%;
 }
 
-.container {
-min-height: 100%;
-margin-bottom: -550px;
-position: relative;
+.wrap {
+  min-height: 99%;
+  height: auto;
+  margin: 0 auto -60px;
+  padding: 0 0 60px;
 }
 
-.clearfooter {
-margin-top: 150px;
-height: 200px;
-clear: both;
+footer {
+  height: 50px;
 }
 
 .greeting {
@@ -71,11 +70,12 @@ header {
 
 .title {
   display: inline;
-  font-size: 50px;
+  font-size: 55px;
 }
 
 .login {
   text-align: center;
   display: inline;
   float: right;
+  font-size: 20px;
 }

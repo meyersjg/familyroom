@@ -11,13 +11,13 @@
           <%= hidden_field_tag :family_id, current_member.family_id %>
 
              <p>
-               <b>Family Member's First Name:</b>
+               Family Member's First Name:
                <br>
                <%= text_field_tag :first_name %>
              </p>
 
              <p>
-               <b>Family Member's email:</b>
+               Family Member's email:
                <br>
                <%= text_field_tag :email %>
              </p>
@@ -34,9 +34,31 @@
 
 <div class="family_messages">
   <h2>Messages</h2>
-  <% if session[:member_id] %>
-    <p><%= link_to "Write a Message", new_message_url(family_id: @family.id) %></p>
-  <% end %>
+ <h6><%= link_to 'Write a Message', '#new_message_url', class: "fancybox" %></h6>
+      <div id="new_message_url" style="display:none">
+        <h1>Write a Message</h1>
+
+          <%= form_tag(messages_url, method: 'post') do %>
+
+            <%= hidden_field_tag :member_id, current_member.id %>
+
+            <%= hidden_field_tag :family_id, current_member.family.id %>
+
+            <div>
+              <%= label_tag :title %><br />
+              <%= text_field_tag :title %>
+            </div>
+
+            <div>
+              <%= label_tag :body %><br />
+              <%= text_area_tag :body %>
+            </div>
+
+            <div>
+              <%= submit_tag "Create Message" %>
+            </div>
+          <% end %>
+      </div>
 
   <% if @family.messages.present? %>
 
