@@ -1,0 +1,17 @@
+
+
+    <%= form_tag create_invite_members_path(@member), html: {class: 'form'} do %>
+
+        <%= hidden_field_tag :family_id, current_member.family_id %>
+
+        <div class="form-group">
+            <%= label_tag 'Family Member\'s First Name:' %>
+            <%= text_field_tag :first_name, '', class: 'form-control' %>    
+        </div>     
+        <div class="form-group">
+            <%= label_tag 'Family Member\'s Email:' %>
+            <%= text_field_tag :email, '', class: 'form-control' %>        
+        </div>
+
+        <%= submit_tag "Invite Family Members!", class: 'btn btn-default' %>
+    <% end %>

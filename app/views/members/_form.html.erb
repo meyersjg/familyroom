@@ -1,30 +1,30 @@
 
-<%= form_for Member.new do |f| %>
+<%= form_for @member, class: 'form' do |f| %>
 
   <%= f.hidden_field :family_id, :value => params[:family_id] if params[:family_id].present? %>
 
-  <div>
-    <%= f.label :first_name %><br>
-    <%= f.text_field :first_name %>
+  <div class="form-group">
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :email %>
+    <%= f.text_field :email, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :password %>
+    <%= f.password_field :password, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation, class: 'form-control' %>
   </div>
 
   <div>
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
-  </div>
-
-  <div>
-    <%= f.label :password %><br>
-    <%= f.password_field :password %>
-  </div>
-
-  <div>
-    <%= f.label :password_confirmation %><br>
-    <%= f.password_field :password_confirmation %>
-  </div>
-
-  <div>
-    <%= f.submit %>
+    <%= f.submit 'Submit' ,class: 'btn btn-default' %>
   </div>
 <% end %>
 

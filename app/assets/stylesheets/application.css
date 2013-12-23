@@ -79,3 +79,9 @@ header {
   float: right;
   font-size: 20px;
 }
+
+
+#new_member_url {
+  min-width: 300px;
+}
+/*Adding width here to make the create account box a little less cramped. This isn't an elegant solution, should maybe look into fancybox documentation, or add a styling class to all form popups*/
