@@ -1,0 +1,18 @@
+<%= form_tag(messages_url, html: {class: 'form'}, method: 'post') do %>
+
+  <%= hidden_field_tag :member_id, current_member.id %>
+
+  <%= hidden_field_tag :family_id, current_member.family.id %>
+
+  <div class="form-group">
+    <%= label_tag :title %>
+    <%= text_field_tag :title,'', class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= label_tag :body %>
+    <%= text_area_tag :body,'', class: 'form-control' %>
+  </div>
+
+  <%= submit_tag "Create Message", class: 'btn btn-default' %>
+<% end %>
