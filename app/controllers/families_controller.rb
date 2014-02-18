@@ -1,4 +1,4 @@
-class FamiliesController < ApplicationController
+ class FamiliesController < ApplicationController
 
   def index
     @families = Family.all

@@ -1,6 +1,7 @@
 FamilyRoom::Application.routes.draw do
 
   get '/about' => "pages#about", as: 'about'
+  get '/faq' => "pages#faq", as: 'faq'
 
   get '/invite_members' => 'members#invite_members'
   post '/create_invite_members' => 'members#create_invite_members'

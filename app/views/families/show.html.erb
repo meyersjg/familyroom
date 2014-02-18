@@ -1,37 +1,5 @@
 <h1 class="family_title"><%= @family.name %> Family Room</h1>
 
-<div class="family_members">
-    <h2>Family Members</h2>
-    <h6><%= link_to 'Invite Family Members!', '#invite_members_url', class: "fancybox" %></h6>
-      <div id="invite_members_url" style="display:none">
-        <h1>Invite Your Family!</h1>
-
-          <%= form_tag create_invite_members_path(@member) do %>
-
-          <%= hidden_field_tag :family_id, current_member.family_id %>
-
-             <p>
-               Family Member's First Name:
-               <br>
-               <%= text_field_tag :first_name %>
-             </p>
-
-             <p>
-               Family Member's email:
-               <br>
-               <%= text_field_tag :email %>
-             </p>
-
-           <%= submit_tag "Invite Family Members!" %>
-          <% end %>
-        </div>
-
-      <% @family.members.each do |member| %>
-        <%= link_to member.first_name, member_url(id: member.id) %>
-        <br>
-      <% end %>
-</div>
-
 <div class="family_messages">
   <h2>Messages</h2>
  <h6><%= link_to 'Write a Message', '#new_message_url', class: "fancybox" %></h6>
@@ -71,4 +39,37 @@
       </article>
     <% end %>
   <% end %>
+</div>
+
+
+<div class="family_members">
+    <h2>Family Members</h2>
+    <h6><%= link_to 'Invite Family Members!', '#invite_members_url', class: "fancybox" %></h6>
+      <div id="invite_members_url" style="display:none">
+        <h1>Invite Your Family!</h1>
+
+          <%= form_tag create_invite_members_path(@member) do %>
+
+          <%= hidden_field_tag :family_id, current_member.family_id %>
+
+             <p>
+               Family Member's First Name:
+               <br>
+               <%= text_field_tag :first_name %>
+             </p>
+
+             <p>
+               Family Member's email:
+               <br>
+               <%= text_field_tag :email %>
+             </p>
+
+           <%= submit_tag "Invite Family Members!" %>
+          <% end %>
+        </div>
+
+      <% @family.members.each do |member| %>
+        <%= link_to member.first_name, member_url(id: member.id) %>
+        <br>
+      <% end %>
 </div>

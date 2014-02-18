@@ -19,30 +19,35 @@ a:hover {
 }
 
 .navbar {
-  display: inline-block;
+  /*display: inline-block;*/
 }
 
 .current_member {
-  float: right;
+  display: inline-block;
+}
+
+.family_title {
+  text-align: center;
 }
 
 .family_members {
-  float: left;
+  float: right;
   font-size: 24px;
   text-align: center;
   height: 600px;
   border: 1px solid #AAA;
   padding: 10px 20px 20px 10px;
+  margin-right: 5%;
 }
 
 .family_messages {
-  float: left;
+  display: inline-block;
   text-align: center;
   height: 600px;
   width: 400px;
   border: 1px solid #AAA;
   padding: 10px 20px 20px 10px;
-  margin-left: 40px;
+  margin-left: 30%;
 }
 
 html, body {
