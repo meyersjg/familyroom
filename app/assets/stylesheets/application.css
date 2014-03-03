@@ -18,6 +18,10 @@ a:hover {
   color: #17d6ac;
 }
 
+.container {
+  /*width: 100%;*/
+}
+
 .navbar {
   /*display: inline-block;*/
 }
@@ -28,6 +32,57 @@ a:hover {
 
 .family_title {
   text-align: center;
+}
+
+
+.about {
+  height: 600px;
+  width: 100%;
+  margin-top: 300px;
+  background-color: #006d91;
+  font-size: 50px;
+  color: white;
+  text-align: center;
+}
+
+i {
+  font-size: 150px;
+}
+
+.env {
+  height: 200px;
+}
+
+.comments {
+  height: 200px;
+}
+
+.cal {
+  height: 200px;
+}
+
+.fa-envelope {
+  float: left;
+  margin: 25px 0 0 100px;
+}
+
+.fa-comments-o {
+  float: left;
+  margin: 25px 0 0 100px;
+}
+
+.fa-calendar {
+  float: left;
+  margin: 25px 0 0 100px;
+}
+
+h3 {
+  display: inline-block;
+  font-size: 50px;
+}
+
+.jumbotron {
+  width: 1170px;
 }
 
 .family_members {
@@ -83,4 +138,8 @@ header {
   display: inline;
   float: right;
   font-size: 20px;
+}
+
+#new_member_url {
+  min-width: 300px;
 }
