@@ -13,8 +13,6 @@
  *= require_tree .
  */
 
- @import "library";
-
 *:focus {
     outline: 0;
 }
