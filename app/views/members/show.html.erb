@@ -1,23 +1,27 @@
-<h1>
-  <%= @member.first_name %>
-</h1>
+<div class="member_bio">
 
-<br>
+  <h1>
+    <%= @member.first_name %>
+  </h1>
 
-<p>
-  <b>Email:</b>
-  <%= @member.email %>
-</p>
+  <img src="/assets/Selfie.jpeg" alt="">
 
-<p>
-  <b>Bio:</b>
-  <%= @member.bio %>
-</p>
-<br>
-<h5>
-  <% if session[:member_id] %>
-    <p><%= link_to "Edit Profile", edit_member_url %></p>
-  <% end %>
-  <%= link_to 'Back To Room', family_url(id: current_member.family_id) %>
-</h5>
-<%#= link_to "Back To Room", family_url(id: @family.id) %>
+  <div class="member_info">
+    <p>
+      <b>Email:</b>
+      <%= @member.email %>
+    </p>
+
+    <p>
+      <b>Bio:</b>
+      <%= @member.bio %>
+    </p>
+  </div>
+
+  <div class="member_links">
+    <% if session[:member_id] %>
+      <%= link_to "Edit Profile", edit_member_url %>
+    <% end %>
+    <%= link_to 'Back To Room', family_url(id: current_member.family_id) %>
+  </div>
+</div>

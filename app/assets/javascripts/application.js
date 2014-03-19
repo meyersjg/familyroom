@@ -13,9 +13,24 @@
 //= require jquery
 //= require fancybox
 //= require jquery_ujs
+//= require jquery.validate
 
 //= require_tree .
 
 $(document).ready(function(){
+  // $(".new_member_field").validate({
+  //   debug: true,
+  //   rules: {
+  //   "user[email]": {required: true, email: true},
+  //   "member[password]": {required: true, minlength: 6},
+  //   "member[password_confirmation]": {required: true, equalTo: “#member_password”}
+  //   }
+  // });
+
   $("a.fancybox").fancybox();
+  $('.createfamroom').click(function(){
+    $('html, body').animate({scrollTop:$('.new_member_url').position().top}, 'slow');
+      return false;
+  });
 });
+

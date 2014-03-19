@@ -13,133 +13,18 @@
  *= require_tree .
  */
 
-a:hover {
-  text-decoration: none;
-  color: #17d6ac;
-}
+ @import "library";
 
-.container {
-  /*width: 100%;*/
-}
-
-.navbar {
-  /*display: inline-block;*/
+*:focus {
+    outline: 0;
 }
 
 .current_member {
   display: inline-block;
 }
 
-.family_title {
-  text-align: center;
-}
 
-
-.about {
-  height: 600px;
-  width: 100%;
-  margin-top: 300px;
-  background-color: #006d91;
-  font-size: 50px;
-  color: white;
-  text-align: center;
-}
-
-i {
-  font-size: 150px;
-}
-
-.env {
-  height: 200px;
-}
-
-.comments {
-  height: 200px;
-}
-
-.cal {
-  height: 200px;
-}
-
-.fa-envelope {
-  float: left;
-  margin: 25px 0 0 100px;
-}
-
-.fa-comments-o {
-  float: left;
-  margin: 25px 0 0 100px;
-}
-
-.fa-calendar {
-  float: left;
-  margin: 25px 0 0 100px;
-}
-
-h3 {
-  display: inline-block;
-  font-size: 50px;
-}
-
-.jumbotron {
-  width: 1170px;
-}
-
-.family_members {
-  float: right;
-  font-size: 24px;
-  text-align: center;
-  height: 600px;
-  border: 1px solid #AAA;
-  padding: 10px 20px 20px 10px;
-  margin-right: 5%;
-}
-
-.family_messages {
-  display: inline-block;
-  text-align: center;
-  height: 600px;
-  width: 400px;
-  border: 1px solid #AAA;
-  padding: 10px 20px 20px 10px;
-  margin-left: 30%;
-}
-
-html, body {
-height: 100%;
-}
-
-.wrap {
-  min-height: 99%;
-  height: auto;
-  margin: 0 auto -60px;
-  padding: 10px 0 60px;
-}
-
-footer {
-  height: 50px;
-}
 
 .greeting {
   float: right;
-}
-
-header {
-  border-bottom: 1px solid black;
-}
-
-.title {
-  display: inline;
-  font-size: 55px;
-}
-
-.login {
-  text-align: center;
-  display: inline;
-  float: right;
-  font-size: 20px;
-}
-
-#new_member_url {
-  min-width: 300px;
 }

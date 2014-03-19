@@ -1,0 +1,191 @@
+@import "library";
+
+$titlefont: 'Josefin Sans', sans-serif;;
+$bodyfont: 'Lato';
+$bodyred: #E74C3C;
+$darkbodyred: #d62c1a;
+$titleblue: #2C3E50;
+$darkblue: #2980B9;
+$bgblue: #3498DB;
+$bglightblue: #eaf4fb;
+$borderblue: #75b9e7;
+
+body {
+  border-top: 12px solid $bodyred;
+  font-family: $titlefont;
+}
+
+// New Family Form Page
+
+.newfamform {
+  margin: 0 auto;
+  margin-top: 125px;
+  text-align: center;
+  background-color: $bglightblue;
+  width: 425px;
+  border-radius: 4px;
+
+  .houseicon {
+    color: $titleblue;
+    margin-bottom: 25px;
+    font-size: 140px;
+  }
+
+  p {
+    font-size: 24px;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 25px;
+  }
+
+  h1 {
+    font-size: 72px;
+    color: $titleblue;
+    padding-top: 30px;
+  }
+
+  div {
+    color: $titleblue;
+  }
+
+  .newfaminput {
+    font-size: 20px;
+    font-weight: 600;
+
+    input {
+      font-size: 30px;
+      text-align: center;
+      width: 300px;
+      height: 35px;
+      border-radius: 4px;
+      border: none;
+    }
+  }
+
+  .newfambutton {
+    margin-top: 30px;
+    padding-bottom: 50px;
+
+    input {
+      width: 300px;
+      border-radius: 4px;
+      -webkit-transition: all 0.2s ease;
+      -moz-transition: all 0.2s ease;
+      -ms-transition: all 0.2s ease;
+      transition: all 0.2s ease;
+      background-color: $bodyred;
+      border: none;
+      color: white;
+      font-size: 24px;
+      font-weight: 600;
+      padding: 8px 5px;
+      width: 300px;
+
+      &:hover {
+        background-color: $darkbodyred;
+      }
+    }
+  }
+}
+
+
+// Family Show Page
+
+.familyshow {
+  background-color: $bgblue;
+  padding-bottom: 50px;
+
+    h1 {
+    text-align: center;
+    font-size: 70px;
+    font-weight: 600;
+    color: white;
+    margin-top: 0;
+    padding-top: 20px;
+  }
+
+
+  .container {
+    margin: 0 auto;
+    max-width: $wrap_width;
+    padding: 0 $gutter_width;
+
+    .family_title {
+      padding-top: 40px;
+    }
+
+    .family_members {
+      @include columnify(3);
+      display: inline-block;
+      font-size: 24px;
+      text-align: center;
+      padding: 10px 20px 20px 10px;
+      background-color: $bglightblue;
+      border-radius: 4px;
+      margin-right: $gutter_width;
+      margin-left: $gutter_width;
+      height: 800px;
+
+      h2 {
+        font-size: 40px;
+        color: $titleblue;
+        font-weight: 300;
+      }
+
+      a {
+        text-decoration: none;
+        color: $bodyred;
+      }
+    }
+
+    .family_messages {
+      @include columnify(8);
+      display: inline-block;
+      text-align: center;
+      background-color: $bglightblue;
+      border-radius: 4px;
+      padding: 10px 20px 20px 10px;
+      height: 800px;
+      vertical-align: top;
+
+      h2 {
+        font-size: 72px;
+        margin: 20px 0 20px 0;
+        color: $titleblue;
+        font-weight: 300;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      h6 {
+        font-size: 30px;
+        margin: 30px 0 50px 0;
+
+        a {
+          color: $bodyred;
+        }
+      }
+    }
+  }
+}
+
+#new_message_url {
+  text-align: center;
+  width: 350px;
+
+  #title {
+    width: 75%;
+    height: 30px;
+  }
+
+  label {
+    font-size: 24px;
+  }
+
+  #body {
+    width: 75%;
+    height: 70px;
+  }
+}

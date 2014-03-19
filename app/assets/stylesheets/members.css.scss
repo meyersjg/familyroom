@@ -1,0 +1,53 @@
+@import "library";
+
+$titlefont: 'Josefin Sans', sans-serif;;
+$bodyfont: 'Lato';
+$bodyred: #E74C3C;
+$darkbodyred: #d62c1a;
+$titleblue: #2C3E50;
+$darkblue: #2980B9;
+$bgblue: #3498DB;
+$bglightblue: #eaf4fb;
+$borderblue: #75b9e7;
+
+.member_bio {
+  margin: 0 auto;
+  margin-top: 125px;
+  text-align: center;
+  background-color: $bglightblue;
+  width: 600px;
+  border-radius: 4px;
+  padding-bottom: 40px;
+
+  img {
+    height: 200px;
+    border-radius: 50%;
+  }
+
+  h1 {
+    font-size: 72px;
+    color: $titleblue;
+    padding-top: 30px;
+    margin-bottom: 10px;
+  }
+
+  .member_info {
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    text-align: left;
+    font-size: 24px;
+  }
+
+  .member_links {
+    font-size: 24px;
+
+    a {
+      text-decoration: none;
+      display: block;
+      color: $titleblue;
+    }
+  }
+
+}

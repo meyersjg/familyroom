@@ -2,8 +2,9 @@
 <html>
 <head>
   <title>FamilyRoom</title>
-  <link rel="stylesheet" type="text/css" href="http://bootswatch.com/yeti/bootstrap.min.css">
-  <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.0.1/js/bootstrap.min.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:300,600,700' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
@@ -12,55 +13,23 @@
 
 <body>
 
-<div class="wrap">
-  <div class="container">
-    <header>
-     <h1 class="title"><%= link_to "FamilyRoom", root_url %></h1>
-      <div class="login">
-        <% if session[:member_id].present? %>
-          <%= link_to "Sign Out", logout_url %>
-          <% else %>
-          <%= link_to "Sign In", '#login', :class => "fancybox" %>
-        <% end %>
-      </div>
-
-      <div id="login" style="display:none">
-        <h1>Sign In</h1>
-
-          <%= form_tag sessions_url do %>
-
-            <%= label_tag :email, "Email:" %>
-            <%= text_field_tag :email, params[:email], size: 20 %>
-            <br>
-            <%= label_tag :password, "Password:" %>
-            <%= password_field_tag :password %>
-            <br>
-            <%= submit_tag "Enter" %>
-
-          <% end %>
-
-      </div>
-    </header>
-
-    <% if current_member && current_member.family_id %>
+<!--     <% if current_member && current_member.family_id %>
       <h3 class="current_member">Hello, <%= link_to current_member.first_name, family_url(id: current_member.family_id) %>!</h3>
-    <% end %>
-
-  </div>
+    <% end %> -->
 
 
-  <div class="container">
+
+
     <%= yield %>
-  </div>
-</div>
 
-    <footer>
+
+<!--     <footer>
       <div class="container">
         <hr class="featurette-divider">
         <p class="pull-right"></p>
         <p>&copy; JGM, Inc. &middot; <a href= "/about">About</a></p>
       </div>
-    </footer>
+    </footer> -->
 
 </body>
 </html>
