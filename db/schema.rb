@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131203201650) do
+ActiveRecord::Schema.define(version: 20140401192832) do
 
   create_table "families", force: true do |t|
     t.string "name"
@@ -26,10 +26,11 @@ ActiveRecord::Schema.define(version: 20131203201650) do
   end
 
   create_table "messages", force: true do |t|
-    t.string  "title"
-    t.text    "body"
-    t.integer "member_id"
-    t.integer "family_id"
+    t.string   "title"
+    t.text     "body"
+    t.integer  "member_id"
+    t.integer  "family_id"
+    t.datetime "created_at"
   end
 
 end

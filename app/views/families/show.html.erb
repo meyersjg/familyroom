@@ -104,8 +104,11 @@
         <% @family.messages.each do |message| %>
           <article>
             <h3>
-              <%= message.member.first_name %>: <%= message.title %>
+              <%= message.member.first_name %>
             </h3>
+            <h4 class="time">
+              <%= time_ago_in_words(message.created_at) if message.created_at.present? %> ago
+            </h4>
             <p><%= message.body %></p>
           </article>
         <% end %>

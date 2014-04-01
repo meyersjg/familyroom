@@ -99,10 +99,12 @@ header {
   color: white;
   font-family: $titlefont;
   background-color: $bgblue;
-  border-bottom: 2px solid $titleblue;
+  border-bottom: 1px solid $titleblue;
 
-.welcome {
+  .welcome {
     padding-top: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
 
     h1 {
       font-size: 70px;
@@ -365,5 +367,141 @@ header {
         }
       }
     }
+  }
+}
+
+@media screen and (max-width: 990px) {
+  header {
+    .centerwrap {
+      .title {
+        width: 85%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .imac {
+    background-size: 900px;
+  }
+}
+
+@media screen and (max-width: 790px) {
+  .upperhome {
+    .welcome {
+      h1 {
+        font-size: 65px;
+      }
+      h3 {
+        font-size: 45px;
+      }
+    }
+  }
+  .imac {
+    background-size: 800px;
+  }
+}
+
+@media screen and (max-width: 735px) {
+  .upperhome {
+    .welcome {
+      h1 {
+        font-size: 60px;
+      }
+      h3 {
+        font-size: 40px;
+      }
+    }
+  }
+  .imac {
+    background-size: 700px;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .upperhome {
+    .welcome {
+      h1 {
+        font-size: 55px;
+      }
+      h3 {
+        font-size: 35px;
+      }
+    }
+  }
+
+  header {
+    .centerwrap {
+      .title {
+        width: 80%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .upperhome {
+    .welcome {
+      padding-top: 75px;
+      h1 {
+        font-size: 50px;
+      }
+      h3 {
+        font-size: 30px;
+      }
+    }
+  }
+
+  header {
+    .centerwrap {
+      .title {
+        width: 80%;
+      }
+    }
+  }
+
+  .imac {
+    background-size: 600px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .upperhome {
+    .welcome {
+      h1 {
+        font-size: 45px;
+      }
+      h3 {
+        font-size: 30px;
+        .line {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 525px) {
+  .upperhome {
+    .welcome {
+      h1 {
+        font-size: 50px;
+      }
+      h3 {
+        font-size: 30px;
+      }
+    }
+  }
+
+  header {
+    .centerwrap {
+      .login {
+        display: block;
+      }
+    }
+  }
+
+  .imac {
+    background-size: 500px;
   }
 }

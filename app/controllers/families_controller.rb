@@ -6,6 +6,7 @@
 
   def show
     @family = Family.find_by(id: params[:id])
+    @messages = @family.messages.order('created_at DESC')
   end
 
   def new
