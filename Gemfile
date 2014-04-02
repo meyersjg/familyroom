@@ -1,8 +1,6 @@
 ruby '2.0.0'
 source 'https://rubygems.org'
 
-gem 'carrierwave'
-
 gem 'fancybox2-rails', '~>0.2.4'
 
 gem 'starter_generators'
