@@ -99,9 +99,9 @@
               <% end %>
           </div>
 
-      <% if @family.messages.present? %>
+      <% if @messages.present? %>
 
-        <% @family.messages.each do |message| %>
+        <% @messages.each do |message| %>
           <article>
             <h3>
               <%= message.member.first_name %>
