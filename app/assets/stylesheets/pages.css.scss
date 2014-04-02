@@ -50,7 +50,7 @@ header {
       font-weight: 100;
       font-family: $titlefont;
       display: inline-block;
-      width: 90%;
+      width: 85%;
 
       a {
         text-decoration: none;
@@ -377,20 +377,19 @@ header {
   }
 }
 
-@media screen and (max-width: 990px) {
-  header {
-    .centerwrap {
-      .title {
-        width: 85%;
-      }
-    }
-  }
-}
 
 @media screen and (max-width: 900px) {
   .imac {
     background-size: 900px;
   }
+  header {
+    .centerwrap {
+      .title {
+        width: 80%;
+      }
+    }
+  }
+
 }
 
 @media screen and (max-width: 790px) {
@@ -440,7 +439,7 @@ header {
   header {
     .centerwrap {
       .title {
-        width: 80%;
+        width: 75%;
       }
     }
   }
@@ -455,14 +454,6 @@ header {
       }
       h3 {
         font-size: 30px;
-      }
-    }
-  }
-
-  header {
-    .centerwrap {
-      .title {
-        width: 80%;
       }
     }
   }
@@ -504,11 +495,41 @@ header {
     .centerwrap {
       .login {
         display: block;
+        width: 100%;
+        text-align: center;
       }
     }
   }
 
   .imac {
     background-size: 500px;
+  }
+}
+
+// iphone
+@media screen and (max-width: 320px) {
+  .upperhome {
+    .welcome {
+      h1 {
+        font-size: 30px;
+      }
+      h3 {
+        font-size: 18px;
+      }
+    }
+  }
+
+  header {
+    .centerwrap {
+      .login {
+        display: block;
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+
+  .imac {
+    background-size: 200px;
   }
 }
