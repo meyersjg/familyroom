@@ -185,7 +185,6 @@ header {
     text-align: center;
 
     h3 {
-      width: 70%;
       font-size: 100px;
       font-weight: 300;
       margin: 0 auto;
@@ -377,11 +376,31 @@ header {
   }
 }
 
+@media screen and (max-width: 1130px) {
+  .whyfamilyroom {
+    .what {
+      p {
+        width: 65%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 975px) {
+  .intro {
+    .slogan {
+      h3 {
+        font-size: 90px;
+      }
+    }
+  }
+}
 
 @media screen and (max-width: 900px) {
   .imac {
     background-size: 900px;
   }
+
   header {
     .centerwrap {
       .title {
@@ -390,7 +409,18 @@ header {
     }
   }
 
+  .intro {
+    .slogan {
+      h3 {
+        font-size: 80px;
+      }
+      p {
+        width: 90%;
+      }
+    }
+  }
 }
+
 
 @media screen and (max-width: 790px) {
   .upperhome {
@@ -405,6 +435,13 @@ header {
   }
   .imac {
     background-size: 800px;
+  }
+  .intro {
+    .slogan {
+      h3 {
+        font-size: 75px;
+      }
+    }
   }
 }
 
@@ -422,9 +459,16 @@ header {
   .imac {
     background-size: 700px;
   }
+  .intro {
+    .slogan {
+      h3 {
+        font-size: 70px;
+      }
+    }
+  }
 }
 
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 685px) {
   .upperhome {
     .welcome {
       h1 {
@@ -440,6 +484,17 @@ header {
     .centerwrap {
       .title {
         width: 75%;
+      }
+    }
+  }
+
+  .intro {
+    .slogan {
+      h3 {
+        font-size: 60px;
+      }
+      p {
+        font-size: 45px;
       }
     }
   }
@@ -477,6 +532,17 @@ header {
       }
     }
   }
+
+  .intro {
+    .slogan {
+      h3 {
+        font-size: 50px;
+      }
+      p {
+        font-size: 40px;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 525px) {
@@ -503,6 +569,19 @@ header {
 
   .imac {
     background-size: 500px;
+  }
+}
+
+@media screen and (max-width: 485px) {
+  .intro {
+    .slogan {
+      h3 {
+        font-size: 45px;
+      }
+      p {
+        font-size: 30px;
+      }
+    }
   }
 }
 
