@@ -244,14 +244,13 @@ header {
   text-align: center;
 
   .icons {
-    width: 75%;
     height: 100%;
     margin: 0 auto;
 
-    div {
+    li {
       display: inline-block;
       vertical-align: top;
-      width: 33%;
+      width: 300px;
       margin-top: 40px;
 
       i {
@@ -376,6 +375,7 @@ header {
   }
 }
 
+
 @media screen and (max-width: 1130px) {
   .whyfamilyroom {
     .what {
@@ -391,6 +391,14 @@ header {
     .slogan {
       h3 {
         font-size: 90px;
+      }
+    }
+  }
+
+  .about {
+    .icons {
+      li {
+        width: 250px;
       }
     }
   }
@@ -422,7 +430,8 @@ header {
 }
 
 
-@media screen and (max-width: 790px) {
+
+@media screen and (max-width: 800px) {
   .upperhome {
     .welcome {
       h1 {
@@ -440,6 +449,20 @@ header {
     .slogan {
       h3 {
         font-size: 75px;
+      }
+    }
+  }
+
+  .about {
+    .icons {
+      li {
+        width: 200px;
+        i {
+          font-size: 125px;
+        }
+        h3 {
+          font-size: 35px;
+        }
       }
     }
   }
