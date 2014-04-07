@@ -15,6 +15,10 @@ class MessagesController < ApplicationController
     @message.body = params[:body]
     @message.member_id = params[:member_id]
     @message.family_id = params[:family_id]
+    @message.image_file_name = params[:image_file_name]
+    @message.image_content_type = params[:image_content_type]
+    @message.image_file_size = params[:image_file_size]
+    @message.image_updated_at = params[:image_updated_at]
     @message.save
 
     redirect_to family_url(id: current_member.family_id), notice: "Message created successfully."
@@ -42,4 +46,10 @@ class MessagesController < ApplicationController
 
     redirect_to messages_url, notice: "Message deleted."
   end
+end
+
+private
+
+def message_params
+  params.require(:message).permit(:image)
 end
